@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pizza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="cart">
+        <h2>Cart</h2>
+        <div id="small_cart" class="cart_item">Small Pizza: <span id="small_count">0</span></div>
+        <div id="medium_cart" class="cart_item">Medium Pizza: <span id="medium_count">0</span></div>
+        <div id="large_cart" class="cart_item">Large Pizza: <span id="large_count">0</span></div>
+        <div>Total Cost: R<span id="total_cost">0.00</span></div>
+        <button id="checkout_button" onclick="checkout()">Check Out</button>
+
+        <div id="payment_message"></div>
+    </div>
+
+    <div class="pizzas">
+        <div class="pizza small_pizza">
+            <h2>Small Pizza</h2>
+            <img src="pizza.png" width="100" alt="Small Pizza Image">
+            <h3>R78.99</h3>
+            <button onclick="addToCart('small')">Order</button>
+            <div class="description">
+                Small pizza with 1 meat topping and 3 or fewer other toppings.
+            </div>
+        </div>
+
+        <div class="pizza medium_pizza">
+            <h2>Medium Pizza</h2>
+            <img src="pizza.png" width="125" alt="Medium Pizza Image">
+            <h3>R89.00</h3>
+            <button onclick="addToCart('medium')">Order</button>
+            <div class="description">
+                Medium margherita pizza with 2 or fewer meat toppings and 3 or fewer other toppings.
+            </div>
+        </div>
+
+        <div class="pizza large_pizza">
+            <h2>Large Pizza</h2>
+            <img src="pizza.png" width="150" alt="Large Pizza Image">
+            <h3>R129.00</h3>
+            <button onclick="addToCart('large')">Order</button>
+            <div class="description">
+                Large margherita pizza with 3 or fewer meat toppings and 3 or fewer other toppings.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="overlay" class="overlay"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

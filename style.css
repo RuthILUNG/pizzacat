@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px; /* Gap between sections */
+    max-width: 800px; /* Limit container width */
+    margin: 0 auto; /* Center container horizontally */
+}
+
+.cart {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.cart_item {
+    margin-bottom: 5px;
+}
+
+.pizzas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for pizza options */
+    gap: 20px;
+}
+
+.pizza {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pizza img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.overlay.visible {
+    display: block;
+}
+
+.payment_popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1100;
+    text-align: center;
+}
+
+.payment_popup input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.payment_popup button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.payment_message {
+    text-align: center;
+    margin-top: 10px;
+}
