@@ -25,7 +25,7 @@ function addToCart(size) {
     updateCart();
 }
 
-function removeFromCart(size) {
+function decrementCartItem(size) {
     if (cart[size] > 0) {
         cart[size]--;
         if (size === 'small') {
@@ -39,8 +39,26 @@ function removeFromCart(size) {
     }
 }
 
+function incrementCartItem(size) {
+    switch (size) {
+        case 'small':
+            cart.small++;
+            cart.totalCost += 78.99;
+            break;
+        case 'medium':
+            cart.medium++;
+            cart.totalCost += 89.00;
+            break;
+        case 'large':
+            cart.large++;
+            cart.totalCost += 129.00;
+            break;
+    }
+    updateCart();
+}
+
 function toggleCheckoutButton() {
-    const checkoutButton = document.querySelector('#checkout_button');
+    const checkoutButton = document.getElementById('checkout_button');
     if (cart.small + cart.medium + cart.large > 0) {
         checkoutButton.style.display = 'block';
     } else {

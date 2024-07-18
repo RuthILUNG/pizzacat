@@ -11,14 +11,30 @@
 <div class="container">
     <div class="cart">
         <h2>Cart</h2>
-        <div id="small_cart" class="cart_item">Small Pizza: <span id="small_count">0</span></div>
-        <div id="medium_cart" class="cart_item">Medium Pizza: <span id="medium_count">0</span></div>
-        <div id="large_cart" class="cart_item">Large Pizza: <span id="large_count">0</span></div>
+        <div id="small_cart" class="cart_item">Small Pizza:
+            <button onclick="decrementCartItem('small')">-</button>
+            
+            <button onclick="incrementCartItem('small')">+</button>
+            <span id="small_count">0</span>
+        </div>
+        <div id="medium_cart" class="cart_item">Medium Pizza:
+            <button onclick="decrementCartItem('medium')">-</button>
+           
+            <button onclick="incrementCartItem('medium')">+</button>
+            <span id="medium_count">0</span>
+        </div>
+        <div id="large_cart" class="cart_item">Large Pizza:
+            <button onclick="decrementCartItem('large')">-</button>
+           
+            <button onclick="incrementCartItem('large')">+</button>
+            <span id="large_count">0</span>
+        </div>
         <div>Total Cost: R<span id="total_cost">0.00</span></div>
-        <button id="checkout_button" onclick="checkout()">Check Out</button>
-
+        <button id="checkout_button" onclick="checkout()" style="display: none;">Check Out</button>
+    
         <div id="payment_message"></div>
     </div>
+    
 
     <div class="pizzas">
         <div class="pizza small_pizza">
